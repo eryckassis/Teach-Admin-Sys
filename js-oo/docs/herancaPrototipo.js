@@ -22,3 +22,10 @@ const admin = {
 Object.setPrototypeOf(admin, user);
 admin.criarCurso();
 admin.exibeInfos();
+
+// utilização NEW para a criação de um novo objeto:
+
+function user() {}
+user.prototype.perfil = "estudante";
+let estudante = new user();
+console.log(estudante.perfil);
