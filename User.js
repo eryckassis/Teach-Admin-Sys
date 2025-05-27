@@ -1,27 +1,15 @@
 export default class User {
-  constructor(name, email, birthDate, role, active = true) {
-    this.name = name;
+  constructor(nome, email, nascimento, role, ativo = true) {
+    this.nome = nome;
     this.email = email;
-    this.birthDate = birthDate;
+    this.nascimento = nascimento;
     this.role = role || "estudante";
-    this.active = active;
+    this.ativo = ativo;
   }
 
   exibirInfos() {
-    return `${this.name} - ${this.email}`;
+    return `${this.nome}, ${this.email}`;
   }
 }
 
-const newUser = new User(
-  "baiano",
-  "baianagens@gmail.com ",
-  " 19/01/1990",
-  "estudante"
-);
-console.log({
-  isPrototype: User.prototype.isPrototypeOf(newUser),
-  userInfo: newUser.exibirInfos(),
-});
-
-// utlizado Objeto consolidado para informaçoes de objeto,
-// e assim eliminando a necessidade de criar varios console.log
+const novoUser = new User("Juliana", "j@j.com", "2024-01-01");
