@@ -13,6 +13,9 @@ export default class User {
   }
 
   get nome() {
+    if (this.#nome === undefined) {
+      throw new Error("Nome não definido");
+    }
     return this.#nome;
   }
 

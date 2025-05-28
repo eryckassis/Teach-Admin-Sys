@@ -6,3 +6,6 @@ const novoUser = new User("Juliana", " j@j.com", "2024-01-01");
 console.log(novoUser.exibirInfos());
 novoUser.nome = "Macacos";
 console.log(novoUser.nome);
+
+const novoAdmin = new Admin("Rodrigo", "r@r.com", "2024-01-01");
+console.log(novoAdmin.exibirInfos());
