@@ -40,6 +40,9 @@ export default class User {
     // const objUser = this.#montaObjUser();
     return `${this.nome}, ${this.email}`;
   }
+  static exibirInfos(nome, email) {
+    return ` ${nome}, ${email}`;
+  }
 }
 
 const novoUser = new User("Juliana", "j@j.com", "2024-01-01");
