@@ -16,9 +16,26 @@ export default class User {
     return this.#nome;
   }
 
+  get email() {
+    return this.#email;
+  }
+  get nascimento() {
+    return this.#nascimento;
+  }
+  get role() {
+    return this.#role;
+  }
+  get ativo() {
+    return this.#ativo;
+  }
+
+  set nome(novoNome) {
+    this.#nome = novoNome;
+  }
+
   exibirInfos() {
-    const objUser = this.#montaObjUser();
-    return `${objUser.nome}, ${objUser.email}`;
+    // const objUser = this.#montaObjUser();
+    return `${this.nome}, ${this.email}`;
   }
 }
 
