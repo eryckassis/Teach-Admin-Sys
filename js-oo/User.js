@@ -16,16 +16,6 @@ export default class User {
     return this.#nome;
   }
 
-  #montaObjUser() {
-    return {
-      nome: this.#nome,
-      email: this.#email,
-      nascimento: this.#nascimento,
-      role: this.#role,
-      ativo: this.#ativo,
-    };
-  }
-
   exibirInfos() {
     const objUser = this.#montaObjUser();
     return `${objUser.nome}, ${objUser.email}`;
