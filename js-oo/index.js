@@ -5,6 +5,6 @@ import Admin from "./Admin.js";
 const novoUser = new User("Juliana", " j@j.com", "2024-01-01");
 console.log(novoUser.exibirInfos());
 
-novoUser.nome = "Juliana Silva";
+// novoUser.#nome = "Juliana Silva";
 console.log(novoUser.exibirInfos());
-console.log(novoUser.nome);
+// console.log(novoUser.#nome);
