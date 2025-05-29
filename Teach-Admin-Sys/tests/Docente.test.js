@@ -1,4 +1,4 @@
-import Docente from "../src/Docente.js";
+import Docente from "../src/models/Docente.js";
 
 descreva("Docente Class", () => {
   it('should create a Docente instance with role as "docente"', () => {

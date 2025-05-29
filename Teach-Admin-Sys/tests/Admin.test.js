@@ -1,4 +1,4 @@
-import Admin from "../src/Admin.js";
+import Admin from "../src/models/Admin.js";
 
 describe("Admin Class", () => {
   it('should create an Admin instance with role as "admin"', () => {
