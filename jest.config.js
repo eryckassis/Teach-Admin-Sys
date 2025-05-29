@@ -1,10 +1,11 @@
 export default {
   transform: {
-    "^.+\\.js$": "babel-jest", // Transpilar arquivos .js usando o Babel
+    "^.+\\.js$": "babel-jest", // Transpilar arquivos .js usando Babel
   },
-  testEnvironment: "node", // Define o ambiente de testes como Node.js
-  transformIgnorePatterns: [
-    "/node_modules/", // Ignorar transformação na pasta node_modules
-  ],
+  testEnvironment: "node", // Define o ambiente de teste como Node.js
+  moduleNameMapper: {
+    // Ajusta caminhos de import, se necessário
+    "^@models/(.*)$": "<rootDir>/src/models/$1",
+  },
+  verbose: true, // Mostra detalhes dos testes no terminal
 };
-// Configuração do Jest para o Teach-Admin-Sys
