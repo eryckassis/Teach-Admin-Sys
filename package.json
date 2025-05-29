@@ -2,11 +2,30 @@
   "name": "teach-admin-sys",
   "version": "1.0.0",
   "description": "",
-  "main": "js-oo/User.js",
-  "type": "module",
+  "main": "babel.config.js",
+  "dependencies": {
+    "browserslist": "^4.24.5",
+    "caniuse-lite": "^1.0.30001718",
+    "convert-source-map": "^2.0.0",
+    "debug": "^4.4.1",
+    "electron-to-chromium": "^1.5.160",
+    "escalade": "^3.2.0",
+    "gensync": "^1.0.0-beta.2",
+    "globals": "^11.12.0",
+    "js-tokens": "^4.0.0",
+    "jsesc": "^3.1.0",
+    "json5": "^2.2.3",
+    "lru-cache": "^5.1.1",
+    "ms": "^2.1.3",
+    "node-releases": "^2.0.19",
+    "picocolors": "^1.1.1",
+    "semver": "^6.3.1",
+    "update-browserslist-db": "^1.1.3",
+    "yallist": "^3.1.1"
+  },
+  "devDependencies": {},
   "scripts": {
-    "start": "node js-oo/User.js",
-    "test": "jest"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
@@ -15,11 +34,9 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "type": "commonjs",
   "bugs": {
     "url": "https://github.com/eryckassis/Teach-Admin-Sys/issues"
   },
-  "homepage": "https://github.com/eryckassis/Teach-Admin-Sys#readme",
-  "devDependencies": {
-    "@babel/core": "^7.27.3"
-  }
+  "homepage": "https://github.com/eryckassis/Teach-Admin-Sys#readme"
 }

@@ -1,8 +1,10 @@
-module.exports = {
+export default {
   transform: {
-    "^.+\\.js$": "babel-jest", // Use o Babel para transformar arquivos .js
+    "^.+\\.js$": "babel-jest", // Transpilar arquivos .js usando o Babel
   },
+  testEnvironment: "node", // Define o ambiente de testes como Node.js
   transformIgnorePatterns: [
-    "/node_modules/(?!(nome-do-modulo-que-requer-transformacao)/)", // Substitua "nome-do-modulo-que-requer-transformacao" pelo nome do módulo problemático
+    "/node_modules/", // Ignorar transformação na pasta node_modules
   ],
 };
+// Configuração do Jest para o Teach-Admin-Sys
