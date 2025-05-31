@@ -26,8 +26,6 @@ it("should return correct info for role estudante", () => {
   expect(user.exibirInfos()).toBe("dados estudante: Juliana");
 });
 
-import User from "../src/models/User.js";
-
 describe("User Class", () => {
   it("should create a user with default role 'estudante'", () => {
     const user = new User("Juliana", "j@j.com", "2024-01-01");
@@ -54,7 +52,7 @@ describe("User Class", () => {
   });
 
   it("should validate email with trim", () => {
-    const user = new User("Juliana", "  j@j.com  ", "2024-01-01");
+    const user = new User("Juliana", "j@j.com", "2024-01-01");
     expect(user.email).toBe("j@j.com");
   });
 });

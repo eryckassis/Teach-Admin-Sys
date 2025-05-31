@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 import Docente from "../src/models/Docente.js";
 
 describe("Docente Class", () => {
