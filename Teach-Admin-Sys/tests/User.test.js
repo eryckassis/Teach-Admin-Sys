@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 import User from "../src/models/User.js";
 
 export default class UserTest {
