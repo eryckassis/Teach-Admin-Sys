@@ -26,10 +26,23 @@ export function detectionAnomaly(userLogs, sensitivity = 1.5) {
   return userLogs.some((log) => log > threshold);
 }
 
+/**
+ * Calcula a média dos valores de um array.
+ * @param {Array<number>} values -  Array de valores númericos.
+ * @returns {number} - Média dos valores.
+ */
+
 function calculateAverage(values) {
   const sum = values.reduce((total, value) => total + value, 0);
   return sum / values.length;
 }
+
+/**
+ * Faz o cálculo do limite de anomalia com base na média e na sensibilidade.
+ * @param {number} average  - Média dos logs de acesso do usuário.
+ * @param {*} sensitivity - Sensibilidade para o limite.
+ * @returns {number} - Limite de anomalia calculado.
+ */
 
 function calculateThreshold(average, sensitivity) {
   return average * sensitivity;
