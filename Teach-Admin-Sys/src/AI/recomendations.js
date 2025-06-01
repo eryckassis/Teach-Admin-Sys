@@ -15,5 +15,3 @@ if (!Array.isArray(userHistory) || userHistory.length !== courses.length) {
 }
 
 const otherUsers = [];
-
-// ?Continuar com dados ficticos de preferenccias de outros usuarios
