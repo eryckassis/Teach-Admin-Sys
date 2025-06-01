@@ -5,4 +5,3 @@ console.log(novoUser.exibirInfos());
 
 const dadosFicticios = User.exibirInfos("cassio", "C@Cgmail.com");
 console.log(dadosFicticios);
-// const user = new User("Cassio", "
