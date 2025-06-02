@@ -7,3 +7,6 @@ export function detectAnomaliesRobust(userLogs, options = {}) {
     );
   }
 }
+
+const tensor = tf.tensor1d(userLogs);
+const mean = tensor.mean().arraySync();
