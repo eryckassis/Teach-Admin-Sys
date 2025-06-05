@@ -13,8 +13,7 @@
 
 export function detectionAnomaly(userLogs, sensitivity = 1.5) {
   if (!Array.isArray(userLogs) || userLogs.length === 0) {
-    console.error("Os logs do usuário devem ser um array não vazio.");
-    return false;
+    throw new TypeError("Os logs do usuário devem ser um array não vazio.");
   }
 
   const average = calculateAverage(userLogs);
