@@ -5,12 +5,38 @@ const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY,
 });
 
+// Lista de categorias pode ser facilmente alterada
+export const TICKET_CATEGORIES = [
+  "BUG",
+  "URGENTE",
+  "SUGESTÃO",
+  "ELOGIO",
+  "DÚVIDA",
+  "FINANCEIRO",
+  "SUPORTE TÉCNICO",
+  "ACESSO",
+  "OUTRO",
+];
+
+const EXAMPLES = [
+  { text: "Ao clicar no botão aparece erro 500", category: "BUG" },
+  {
+    text: "Minha mensalidade está errada, preciso de ajuda!",
+    category: "FINANCEIRO",
+  },
+  { text: "Não consigo fazer login, fala senha inválida", category: "ACESSO" },
+  {
+    text: "Sistema caiu, preciso de suporte técnico urgente!",
+    category: "SUPORTE TÉCNICO",
+  },
+  { text: "Gostaria de sugerir uma nova funcionalidade para o sistema" },
+  { text: "Parabéns pelo atendimento!", category: "ELOGIO" },
+  { text: "Como posso acessar o boletim?", category: "DÚVIDA" },
+  { text: "Meu computador não conecta no sistema", category: "URGENTE" },
+];
+
 export async function classifyTicket(text) {
-  const prompt = `Classifique o chamado abaixo em uma das categorias:
-    BUG, URGENTE, SUGESTÃO, ELOGIO, OUTRO.
-    Chamado: "${text}"
-    Categoria:
-    `.trim();
+  const exampleText = EXAMPLES;
 
   const response = await openai.chat.completions.create({
     model: "gpt-3.5-turbo",
