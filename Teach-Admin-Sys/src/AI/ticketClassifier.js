@@ -36,7 +36,19 @@ const EXAMPLES = [
 ];
 
 export async function classifyTicket(text) {
-  const exampleText = EXAMPLES;
+  const exampleText = EXAMPLES.map(
+    (ex) => `Chamado: "${ex.text}" -> Categoria: ${ex.category}`
+  ).join("\n");
+
+  const prompt = `
+  Você é um classificador de chamados para um sistema de administração escolar.
+  Classifique o seguinte chamado recebido em UMA das categorias abaixo, respondendo apenas com o nome da categoria
+  Categorias: ${TICKET_CATEGORIES.join(", ")}
+  Exemplos:
+  ${exampleText}
+  Chamado: "${text}"
+  Categoria:
+  `.trim();
 
   const response = await openai.chat.completions.create({
     model: "gpt-3.5-turbo",
@@ -44,14 +56,19 @@ export async function classifyTicket(text) {
       {
         role: "system",
         content:
-          "Você é um classificador de chamadospara um sistema de administração escolar.",
+          "Classifique chamadas conforme instruções. Responda apenas com o nome da categoria.",
       },
       { role: "user", content: prompt },
     ],
-    mperature: 0,
-    x_tokens: 10,
+    temperature: 0.2,
+    max_tokens: 20,
   });
 
   const category = response.choices[0].message.content.trim().toUpperCase();
-  return category;
+
+  // Fallback caso a categoria não esteja na lista
+  if (!TICKET_CATEGORIES.includes(category)) {
+    console.warn(`Categoria "${category}" não reconhecida. Usando "OUTRO".`);
+    return "OUTRO";
+  }
 }
