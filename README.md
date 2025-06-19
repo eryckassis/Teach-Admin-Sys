@@ -38,7 +38,7 @@ The system is being developed by Eryk Assis with a focus on scalability, modular
 - **Personalization:** Each recommendation is unique to the user's history.
  
 ### 4. Anomaly Detection
-
+ 
 - **Function `detectionAnomaly`:** Detects atypical patterns in user accesses/logs, increasing system security.
 
 ### 5. Modern Architecture
