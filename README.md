@@ -7,7 +7,7 @@
 The system is being developed by Eryk Assis with a focus on scalability, modularity, and seamless integration with modern front-end frameworks.
 
 ---
-
+ 
 ## Objectives and Benefits
 
 - **Intelligent Automation:** Utilizes AI algorithms to automate administrative routines (ticket classification, course suggestions, suspicious access detection), reducing manual workload and speeding up service.
