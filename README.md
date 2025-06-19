@@ -36,7 +36,7 @@ The system is being developed by Eryk Assis with a focus on scalability, modular
 
 - **Function `recommendCourses`:** Analyzes the user's course history compared to other profiles, suggesting new courses based on interest similarity.
 - **Personalization:** Each recommendation is unique to the user's history.
-
+ 
 ### 4. Anomaly Detection
 
 - **Function `detectionAnomaly`:** Detects atypical patterns in user accesses/logs, increasing system security.
