@@ -19,7 +19,7 @@ The system is being developed by Eryk Assis with a focus on scalability, modular
 ---
 
 ## Implemented Features
-
+ 
 ### 1. User Management
 
 - **User Models:** Object-oriented JavaScript classes for Student, Teacher, and Admin profiles, each with specific methods and attributes.
