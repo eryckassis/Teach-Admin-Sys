@@ -1,5 +1,5 @@
 # Teach-Admin-Sys — Professional Documentation
-
+ 
 ## Project Overview
 
 **Teach-Admin-Sys** is an education administration system under development, designed to streamline the management of users (students, teachers, and administrators), courses, and support/academic tickets. It leverages intelligent AI-powered features such as automatic ticket classification, personalized course recommendations, and anomaly detection in user logs.
