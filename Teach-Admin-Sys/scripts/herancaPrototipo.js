@@ -23,3 +23,4 @@ const admin = {
 Object.setPrototypeOf(admin, user);
 admin.criarCurso();
 admin.exibirInfos();
+// Output: "curso criado"
